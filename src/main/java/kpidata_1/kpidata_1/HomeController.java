@@ -43,7 +43,7 @@ public class HomeController {
 		  OrderDetail orderdetail = new OrderDetail();
 		  
 			try {
-				orderdetail.setOrdernum(new ShopOrderDetails().getOrderData());
+				orderdetail = new ShopOrderDetails().getOrderData();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -80,7 +80,8 @@ public class HomeController {
 		  //String ActualQty = String.valueOf(new Random().nextInt(25));
 
 		  OrderDetail orderdetail = new OrderDetail();
-		  orderdetail.setOrdernum(new ShopOrderDetails().getOrderData());
+		  orderdetail = new ShopOrderDetails().getOrderData();
+		  //orderdetail.setOrdernum(new ShopOrderDetails().getOrderData());
 
 		  List<OrderQty> lstOrderQtys = new ArrayList<OrderQty>();
 		  List<Oee> lstOees = new ArrayList<Oee>();
